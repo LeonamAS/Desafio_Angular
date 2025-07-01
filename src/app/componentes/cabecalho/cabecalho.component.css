@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    box-shadow: 0 3px rgb(196, 196, 196);
+ }
+ 
+ header img {
+    max-width: 140px;
+ }
+ 
+ nav {
+    flex: 1;
+    margin-right: 140px;
+    font-size: 20px;
+ }
+ 
+ nav a {
+    color: #1351d8;
+    font-weight: bold;
+    text-decoration: none;
+ }
+ 
+ .menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+ }
+ 
