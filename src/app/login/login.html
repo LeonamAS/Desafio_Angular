@@ -10,17 +10,16 @@
             <div class="formulario">
                 <h2>Boas-vindas</h2>
             </div>
-            <form> <!-- (ngSubmit)="onLogin()"-->
+            <form (ngSubmit)="onLogin()">
                 <mat-form-field appearance="outline">
                     <mat-label>Insira seu e-mail</mat-label>
-                    <input matInput matInput type="text" id="login" name="username" required>
-                    <!-- [(ngModel)]="username" -->
+                    <input matInput matInput type="text" id="login" name="username" [(ngModel)]="username" required>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>Insira sua senha</mat-label>
-                    <input matInput [type]="hide() ? 'password' : 'text'" id="Senha" name="password" required>
-                    <!-- [(ngModel)]="password"  -->
+                    <input matInput [type]="hide() ? 'password' : 'text'" id="Senha" name="password"
+                        [(ngModel)]="password" required>
                     <button matIconButton matSuffix (click)="clickEvent($event)" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide()">
                         <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -29,6 +28,9 @@
                 <p>Logar automaticamente
                     <mat-slide-toggle></mat-slide-toggle>
                 </p>
+                <div *ngIf="loginError" class="mensagemErro">
+                    Usuário ou senha inválido!
+                </div>
                 <button class="confirmar" matButton="filled">Entrar</button>
             </form>
         </div>

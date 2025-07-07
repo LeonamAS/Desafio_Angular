@@ -4,15 +4,24 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { AuthService } from '../auth/auth.service';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
+  standalone: true,
   imports: [
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    FormsModule,
+    CommonModule,
+    HttpClientModule
   ],
   templateUrl: './login.html',
   styleUrl: './login.css',
@@ -21,10 +30,22 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 export class Login {
   username = '';
   password = '';
+  loginError: boolean = false;
 
   hide = signal(true);
   clickEvent(event: MouseEvent) {
     this.hide.set(!this.hide());
     event.stopPropagation();
+  }
+
+  constructor(private auth: AuthService, private router: Router) { }
+
+  onLogin(): void {
+    if (this.auth.login(this.username, this.password)) {
+      this.router.navigate(['/home'])
+    }
+    else {
+      this.loginError = true;
+    }
   }
 }
