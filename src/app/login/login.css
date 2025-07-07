@@ -1,0 +1,33 @@
+.login {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem img {
+    width: 100%;
+}
+
+.painel-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.painel-login img {
+    width: 20%;
+}
+
+.confirmar {
+    margin: 8px 8px 8px 0;
+}
