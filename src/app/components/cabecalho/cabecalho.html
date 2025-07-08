@@ -1,0 +1,65 @@
+<!-- <mat-toolbar class="cabecalho">
+    <a routerLink="menu">
+        <mat-icon fontIcon="menu"></mat-icon>
+    </a>
+    <span class="spacer"></span>
+    <p>Ford Brasil</p>
+</mat-toolbar> -->
+
+<!-- <nav class="navbar" style="background-color: #00378e;">
+  <div class="container-fluid">
+    <button class="navbar-toggler me-2" type="button" (click)="openOffcanvas(content)">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" routerLink="/">Ford Brasil</a>
+
+    <ng-template #content let-offcanvas>
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Offcanvas</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item"><a class="nav-link active" routerLink="/home" (click)="offcanvas.dismiss('Link click')">Home</a></li>
+          </ul>
+      </div>
+    </ng-template>
+  </div>
+</nav> -->
+
+<nav class="navbar" style="background-color: #00378e;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+      aria-controls="offcanvasMenu" aria-label="Abrir Menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand ms-auto" style="color: aliceblue; font-weight: 700;">FORD BRASIL</a>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="offcanvasMenu"
+  aria-labelledby="offcanvasMenuLabel" style="background-color: #00378e;">
+  <div class="offcanvas-header">
+    <img src="/img/ford.png" alt="Logo da Ford" class="img-fluid mx-auto d-block mb-3"
+      style="max-height: 80px; object-fit: contain;">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <span class="text-white mb-3 d-block" style=" text-align: center;"><i>Mudando o mundo, sobre rodas!</i></span>
+    <!-- Slogan -->
+    <ul class="navbar-nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active text-white" aria-current="page" (click)="onHome()"><b>HOME</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" aria-current="page" (click)="onDashboard()"><b>DASHBOARD</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" aria-current="page" (click)="onTestedrive()"><b>TESTE DRIVE</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" (click)="onLogin()"><p>Sair</p></a>
+      </li>
+    </ul>
+  </div>
+</div>

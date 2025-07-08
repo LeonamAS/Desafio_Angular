@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { Cabecalho } from '../cabecalho/cabecalho';
-import { Rodape } from '../rodape/rodape';
+import { Cabecalho } from '../components/cabecalho/cabecalho';
+import { Rodape } from '../components/rodape/rodape';
 
 @Component({
   selector: 'app-home',

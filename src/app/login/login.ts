@@ -21,7 +21,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatSlideToggleModule,
     FormsModule,
     CommonModule,
-    HttpClientModule
   ],
   templateUrl: './login.html',
   styleUrl: './login.css',
