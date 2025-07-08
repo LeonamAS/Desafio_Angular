@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCheckbox } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-login',
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatSlideToggleModule,
     FormsModule,
     CommonModule,
+    MatCheckbox
   ],
   templateUrl: './login.html',
   styleUrl: './login.css',
