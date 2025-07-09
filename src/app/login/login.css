@@ -10,6 +10,7 @@
 
 .imagem {
     display: flex;
+    flex: 2;
     align-items: center;
     justify-content: center;
 }
@@ -21,7 +22,6 @@
 .painel-login {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     width: 50%;
     align-items: center;
     box-shadow: -2px 0 10px #1351d8;
@@ -29,11 +29,11 @@
 
 .painel-login img {
     width: 50%;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 .boas-vindas {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .boas-vindas h2 {
@@ -57,4 +57,21 @@ mat-checkbox {
 
 .copy {
     margin: 10px;
+}
+
+@media only screen and (min-width: 992px) {
+    .painel-login{
+        display: flex;
+        flex: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .imagem {
+        display: none;
+    }
+
+    .painel-login {
+        width: 100%;
+    }
 }

@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { NgbCollapseModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-cabecalho',
-  imports: [CommonModule, NgbCollapseModule, NgbDropdownModule],
+  imports: [CommonModule, NgbCollapseModule, NgbDropdownModule, MatIconModule],
   templateUrl: './cabecalho.html',
   styleUrl: './cabecalho.css'
 })
